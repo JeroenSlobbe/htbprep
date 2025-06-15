@@ -13,7 +13,7 @@ command_map = {
     4: ("wget", "wget --spider --recursive --level=5 -nd {url} -o {out}/wget.txt"),
     5: ("nmap", "nmap -sV {url} -oN {out}/nmap.txt"),
     6: ("whatweb", "whatweb -a 3 {url} >> {out}/whatweb.txt"),
-    7: ("fallparams", "fallparams -u {prefix}{url} -c -o {out}/fallparam.txt")
+    7: ("fallparams", "fallparams -u {prefix}{url} -c -o {out}/fallparam.txt"),
     8: ("subfinder", "subfinder -d {url}.com -all -recursive >> {out}/subfinder.txt
 }
 

@@ -14,7 +14,7 @@ command_map = {
     5: ("nmap", "nmap -sV {url} -oN {out}/nmap.txt"),
     6: ("whatweb", "whatweb -a 3 {url} >> {out}/whatweb.txt"),
     7: ("fallparams", "fallparams -u {prefix}{url} -c -o {out}/fallparam.txt"),
-    8: ("subfinder", "subfinder -d {url}.com -all -recursive >> {out}/subfinder.txt
+    8: ("subfinder", "subfinder -d {url}.com -all -recursive >> {out}/subfinder.txt")
 }
 
 # Argument parser

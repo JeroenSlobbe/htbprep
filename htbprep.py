@@ -7,14 +7,15 @@ import argparse
 
 # Command index map
 command_map = {
-    1: ("gobuster", "gobuster dns -d {url} -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -o {out}/gobuster.txt"),
-    2: ("curl", "curl -I {url} -o {out}/curlHeaders.txt"),
-    3: ("dirb", "dirb {prefix}{url} /usr/share/dirb/wordlists/common.txt -o {out}/dirb.txt"),
-    4: ("wget", "wget --spider --recursive --level=5 -nd {url} -o {out}/wget.txt"),
-    5: ("nmap", "nmap -sV {url} -oN {out}/nmap.txt"),
-    6: ("whatweb", "whatweb -a 3 {url} >> {out}/whatweb.txt"),
-    7: ("fallparams", "fallparams -u {prefix}{url} -c -o {out}/fallparam.txt"),
-    8: ("subfinder", "subfinder -d {url}.com -all -recursive >> {out}/subfinder.txt")
+    1: ("wabwoof", "wabw00f {url} >> {out}/wabwoof.txt"),
+    2: ("gobuster", "gobuster dns -d {url} -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -o {out}/gobuster.txt"),
+    3: ("curl", "curl -I {url} -o {out}/curlHeaders.txt"),
+    4: ("dirb", "dirb {prefix}{url} /usr/share/dirb/wordlists/common.txt -o {out}/dirb.txt"),
+    5: ("wget", "wget --spider --recursive --level=5 -nd {url} -o {out}/wget.txt"),
+    6: ("nmap", "nmap -sV {url} -oN {out}/nmap.txt"),
+    7: ("whatweb", "whatweb -a 3 {url} >> {out}/whatweb.txt"),
+    8: ("fallparams", "fallparams -u {prefix}{url} -c -o {out}/fallparam.txt"),
+    9: ("subfinder", "subfinder -d {url}.com -all -recursive >> {out}/subfinder.txt")
 }
 
 # Argument parser

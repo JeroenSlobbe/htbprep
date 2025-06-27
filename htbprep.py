@@ -7,7 +7,7 @@ import argparse
 
 # Command index map
 command_map = {
-    1: ("wabwoof", "wabw00f {url} >> {out}/wabwoof.txt"),
+    1: ("wafwoof", "wafw00f {url} >> {out}/wafwoof.txt"),
     2: ("gobuster", "gobuster dns -d {url} -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -o {out}/gobuster.txt"),
     3: ("curl", "curl -I {url} -o {out}/curlHeaders.txt"),
     4: ("dirb", "dirb {prefix}{url} /usr/share/dirb/wordlists/common.txt -o {out}/dirb.txt"),

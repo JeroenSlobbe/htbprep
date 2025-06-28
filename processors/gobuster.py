@@ -14,7 +14,7 @@ def process_gobuster_results(
     online_subdomains_file = os.path.join(output_folder, "subdomains_online.txt")
 
     # Regex pattern to extract subdomains
-    subdomain_pattern = re.compile(r"Found: (http[s]?://\S+)")
+    subdomain_pattern = re.compile(r"Found: (\S+)")
 
     # Initialize lists
     subdomains_list = []

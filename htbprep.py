@@ -12,6 +12,7 @@ command_map = {
     3: ("whatweb", "whatweb -a 3 {url} >> {out}/whatweb.txt"),
     4: ("nmap", "nmap -sV {url} -oN {out}/nmap.txt"),
     5: ("gobuster", "gobuster dns -d {url} -w /usr/share/seclists/Discovery/DNS/bitquark-subdomains-top100000.txt -o {out}/gobuster.txt"),
+    6: ("ffuzz", "ffuf -u {prefix}{url} -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H "Host:FUZZ.{url}" -mc 200",
     6: ("dirb", "dirb {prefix}{url} /usr/share/dirb/wordlists/common.txt -o {out}/dirb.txt"),
     7: ("wget", "wget --spider --recursive --level=5 -nd {url} -o {out}/wget.txt"),
     8: ("fallparams", "fallparams -u {prefix}{url} -c -o {out}/fallparam.txt"),
@@ -22,7 +23,7 @@ command_map = {
 # Argument parser
 parser = argparse.ArgumentParser(description="ToolHarmonize: Modular Recon Scanner")
 parser.add_argument("target_url", nargs="?", help="Target URL or domain (required)")
-parser.add_argument("--prefix", default="", help="Optional prefix like http:// or https:// (used by specific tools)")
+parser.add_argument("--prefix", default="http://", help="Optional prefix like http:// or https:// (used by specific tools)")
 parser.add_argument("--only", nargs="+", type=int, help="Run only these command numbers (see --help-screen)")
 parser.add_argument("--exclude", nargs="+", type=int, help="Exclude these command numbers (see --help-screen)")
 parser.add_argument("--processors-only", action="store_true", help="Run processors without executing scans")
